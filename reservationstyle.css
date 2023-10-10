@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("images/CarReserve.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;  
+    padding-bottom: 80px;
+    flex-direction: column;
+}
+
+.back {
+    display: grid;
+    padding-right: 320px;
+}
+.back input[type = image] {
+    width: 25%;
+    height: 100%;
+}
+
+.back input[type = image]:hover{
+    filter: invert(50%);
+}
+.container-content {
+    display: grid;
+    height: 500px;
+    background: rgba(8, 120, 48, 0.9);
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+    padding-bottom: 50px;
+}
+
+
+.form-row {
+    display: flex;
+    margin: auto;
+}
+
+form label {
+    padding-top: 2%;
+}
+
+form select, form input, form textarea{
+    display: block;
+    width: 100%;
+    margin: 2px;
+    padding: 8px;
+    outline: none;
+    border: none;
+}
+
+form textarea {
+    padding: 10px;
+    resize: none;
+}
+
+form input::placeholder{
+    color: gray;
+}
+
+form input[type = submit] {
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+form input[type = submit]:hover{
+    opacity: 0.9;
+}
