@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Reservation Page</title>
+        <link rel="stylesheet" href="reservationstyle.css">
+    </head>
+    <body>
+        <div class ="back"> <input type="image" src="images/back-arrow.png" alt="Back"></div>
+        <div class = "container">
+            <div class ="container-content">
+                <h2> Car Reservation Request Form</h2>
+                
+                <!--Form Request-->
+                <form>
+                    <!--From and To Dates-->
+                    <div class = "form-row">
+                        <label for="From">From: </label>
+                        <input type="date" id="FromDate" name = "FromDate">
+                        <label for="To"> To:</label>
+                        <input type="date" id="ToDate" name = "ToDate">
+                    </div>
+
+                    <!--Car Selection-->
+                    <div class = "form-row"> <!--Add Dynamically and disabled options depending the from and to date above-->
+                        <select name = "Car-select" required> 
+                            <option value ="">Select your Car</option>
+                            <option value ="BMW">BMW</option>
+                            <option value ="Ford" disabled>Ford</option>
+                            <option value ="Toyota">Toyota</option>
+                        </select>
+                    </div>
+
+                    <!--First Name and Last Name-->
+                    <div class = "form-row">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+
+                    <!--ID and Phone Numbers-->
+                    <div class ="form-row">
+                        <input type="text" placeholder="ID Number" required>
+                        <input type="text" placeholder="Phone Number" required>
+                    </div>
+
+                    <!--Text Box-->
+                    <div class ="form-row">
+                        <textarea id="reason" rows="5" cols="33">Type your reason here (Optional).</textarea>
+                    </div>
+
+                    <!--Bypass Request approval-->
+                    <div class ="form-row">
+                        <select name = "Bypass">
+                            <option value ="Employee">Employee</option>
+                            <option value ="Employee" disabled>Administrator</option>
+                        </select>
+                    </div>
+
+                    <!--Submit Button-->
+                    <div class ="form-row"> <input type="Submit" value ="Send"></div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
