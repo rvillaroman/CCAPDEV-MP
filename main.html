@@ -9,15 +9,71 @@
 </head>
 <body>
 
- <!-- Sidebar -->
+ <!----------------------------------------------------->
+ <!---------------------- Sidebar ---------------------->
+ <!----------------------------------------------------->
     <div class="sidebar">
         <div class="top">
             <div class="logo">
-                <i class="bx bxl-codepen"></i>
-                <span>Test</span>
+                <i class='bx bxl-facebook-circle' ></i>
+                <span> <- LOGO HERE</span>
             </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="images/user.png" alt="User" class="user-img">
+            <div>
+                <p class="bold">Name</p>
+                <p>Administrator</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-home' ></i>
+                    <span class="nav-item">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-book' ></i>
+                    <span class="nav-item">Reservations</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-calendar' ></i>
+                    <span class="nav-item">Calendar/Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-log-out' ></i>
+                    <span class="nav-item">Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+ <!--------------------------------------------------------------->
+ <!---------------------- MAIN PAGE CONTENT ---------------------->
+ <!--------------------------------------------------------------->
+
+    <div class="main-content">
+        <div class="container">
         </div>
     </div>
     
+    
 </body>
+
+<script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+
+    btn.onclick = function () {
+        sidebar.classList.toggle("active");
+    };
+
+</script>
 </html>
