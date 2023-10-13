@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+</head>
+
+<body>
+
+    <!----------------------------------------------------->
+    <!---------------------- Sidebar ---------------------->
+    <!----------------------------------------------------->
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo"></div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="images/user.png" alt="User" class="user-img">
+            <div>
+                <p class="bold">Name</p>
+                <p>Administrator</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="main.html">
+                    <i class='bx bxs-home'></i>
+                    <span class="nav-item">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="reservation.html">
+                    <i class='bx bxs-book'></i>
+                    <span class="nav-item">Reservations</span>
+                </a>
+            </li>
+            <li>
+                <a href="calendar.html">
+                    <i class='bx bxs-calendar'></i>
+                    <span class="nav-item">Calendar/Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class='bx bxs-log-out'></i>
+                    <span class="nav-item">Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--------------------------------------------------------------->
+    <!---------------------- MAIN PAGE CONTENT ---------------------->
+    <!--------------------------------------------------------------->
+
+    <div class="main-content">
+        <div id="calendar"></div>
+    </div>
+</body>
+
+<script>
+
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+
+    btn.onclick = function () {
+        sidebar.classList.toggle("active");
+    };
+
+    $(document).ready(function () {
+        $('#calendar').fullCalendar({
+            header:
+            {
+                left: "month, agendaWeek, agendaDay, list",
+                center: "title",
+                right: "prev, today, next"
+            },
+
+            buttonText:
+            {
+                today: "Today",
+                month: "Month",
+                agendaWeek: "Week",
+                agendaDay: "Day",
+                list: "List",
+            },
+
+            events: [
+                {
+                title: "18-Wheeler Truck",
+                start: "2023-10-13T07:00",
+                end: "2023-10-14T12:00",
+                color: "#087830",
+            },
+            {
+                title: "Toyota Hilux",
+                start: "2023-10-13T19:00",
+                end: "2023-10-14T05:00",
+                color: "#087830",
+            }
+        ]
+        });
+    });
+
+</script>
+
+</html>

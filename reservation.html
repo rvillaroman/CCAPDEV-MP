@@ -1,64 +1,124 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Reservation Page</title>
-        <link rel="stylesheet" href="reservationstyle.css">
-    </head>
-    <body>
-        <div class ="back"> <input type="image" src="images/back-arrow.png" alt="Back"></div>
-        <div class = "container">
-            <div class ="container-content">
+
+<head>
+    <title> Reservation Page</title>
+    <link rel="stylesheet" href="reservationstyle.css">
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!----------------------------------------------------->
+    <!---------------------- Sidebar ---------------------->
+    <!----------------------------------------------------->
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo"></div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="images/user.png" alt="User" class="user-img">
+            <div>
+                <p class="bold">Name</p>
+                <p>Administrator</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="main.html">
+                    <i class='bx bxs-home'></i>
+                    <span class="nav-item">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="reservation.html">
+                    <i class='bx bxs-book'></i>
+                    <span class="nav-item">Reservations</span>
+                </a>
+            </li>
+            <li>
+                <a href="calendar.html">
+                    <i class='bx bxs-calendar'></i>
+                    <span class="nav-item">Calendar/Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class='bx bxs-log-out'></i>
+                    <span class="nav-item">Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="container-content">
                 <h2> Car Reservation Request Form</h2>
-                
+
                 <!--Form Request-->
                 <form>
                     <!--From and To Dates-->
-                    <div class = "form-row">
+                    <div class="form-row">
                         <label for="From">From: </label>
-                        <input type="date" id="FromDate" name = "FromDate">
+                        <input type="date" id="FromDate" name="FromDate">
                         <label for="To"> To:</label>
-                        <input type="date" id="ToDate" name = "ToDate">
+                        <input type="date" id="ToDate" name="ToDate">
                     </div>
 
                     <!--Car Selection-->
-                    <div class = "form-row"> <!--Add Dynamically and disabled options depending the from and to date above-->
-                        <select name = "Car-select" required> 
-                            <option value ="">Select your Car</option>
-                            <option value ="BMW">BMW</option>
-                            <option value ="Ford" disabled>Ford</option>
-                            <option value ="Toyota">Toyota</option>
+                    <div class="form-row">
+                        <!--Add Dynamically and disabled options depending the from and to date above-->
+                        <select name="Car-select" required>
+                            <option value="">Select your Car</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Ford" disabled>Ford</option>
+                            <option value="Toyota">Toyota</option>
                         </select>
                     </div>
 
                     <!--First Name and Last Name-->
-                    <div class = "form-row">
+                    <div class="form-row">
                         <input type="text" placeholder="First Name" required>
                         <input type="text" placeholder="Last Name" required>
                     </div>
 
                     <!--ID and Phone Numbers-->
-                    <div class ="form-row">
+                    <div class="form-row">
                         <input type="text" placeholder="ID Number" required>
                         <input type="text" placeholder="Phone Number" required>
                     </div>
 
                     <!--Text Box-->
-                    <div class ="form-row">
+                    <div class="form-row">
                         <textarea id="reason" rows="5" cols="33">Type your reason here (Optional).</textarea>
                     </div>
 
                     <!--Bypass Request approval-->
-                    <div class ="form-row">
-                        <select name = "Bypass">
-                            <option value ="Employee">Employee</option>
-                            <option value ="Employee" disabled>Administrator</option>
+                    <div class="form-row">
+                        <select name="Bypass">
+                            <option value="Employee">Employee</option>
+                            <option value="Employee" disabled>Administrator</option>
                         </select>
                     </div>
 
                     <!--Submit Button-->
-                    <div class ="form-row"> <input type="Submit" value ="Send"></div>
+                    <div class="form-row"> <input type="Submit" value="Send"></div>
                 </form>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
+<script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+
+    btn.onclick = function () {
+        sidebar.classList.toggle("active");
+    };
+</script>
+
 </html>
