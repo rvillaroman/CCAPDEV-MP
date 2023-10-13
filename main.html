@@ -80,17 +80,6 @@
       "6 Series Gran Turismo"
     ];
 
-    const price = [
-      "₱ 1,738,000 - 2,299,000",
-      "₱ 2,948,000 - 7,760,000",
-      "₱ 1,277,000 - 1,599,000",
-      "₱ 1,155,000 - 1,758,000",
-      "₱ 10,390,000",
-      "₱ 3,190,000 - 5,490,000",
-      "₱ 4,290,000",
-      "₱ 8,790,000"
-    ];
-
     const images = [
       "images/car.jpg",
       "images/car2.jpg",
@@ -113,7 +102,7 @@
         false
     ];
 
-    function createCarContainer(description, price, imageSrc, isAvailable) {
+    function createCarContainer(description, imageSrc, isAvailable) {
         const mainContent = document.querySelector('.main-content');
         const container = document.createElement('div');
         container.classList.add('container');
@@ -129,12 +118,11 @@
         p.textContent = description;
       
         const p2 = document.createElement('p');
-        p2.classList.add('price');
-        p2.textContent = isAvailable ? price : "Unavailable";
+        p2.textContent = isAvailable ? "Available" : "Unavailable";
       
         const button = document.createElement('button');
-        button.classList.add('reserve-button');
-        button.textContent = 'Reserve Now';
+        button.classList.add('rent-button');
+        button.textContent = 'Rent Now!';
         button.disabled = !isAvailable;
       
         details.appendChild(p);
@@ -148,7 +136,7 @@
     }
       
       for (let i = 0; i < descriptions.length; i++) {
-        createCarContainer(descriptions[i], price[i], images[i], availability[i]);
+        createCarContainer(descriptions[i], images[i], availability[i]);
       }
 
     let btn = document.querySelector("#btn");
@@ -211,7 +199,7 @@
             container.style.boxShadow = 'none';
         });
 
-        container.querySelector('.reserve-button').addEventListener('click', (event) => {
+        container.querySelector('.rent-button').addEventListener('click', (event) => {
             event.stopPropagation();
         });
     });
@@ -234,7 +222,7 @@
                 container.style.transform = 'scale(1)';
                 container.style.boxShadow = 'none';
             });
-            container.querySelector('.reserve-button').disabled = true;
+            container.querySelector('.rent-button').disabled = true;
             container.classList.add('disabled-container');
         });
     }
