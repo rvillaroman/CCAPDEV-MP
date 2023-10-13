@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Vehicle Reservation System</title>
+    <title>Home</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="sidebarstyle.css">
 </head>
+
 <body>
 
- <!----------------------------------------------------->
- <!---------------------- Sidebar ---------------------->
- <!----------------------------------------------------->
+    <!----------------------------------------------------->
+    <!---------------------- Sidebar ---------------------->
+    <!----------------------------------------------------->
     <div class="sidebar">
         <div class="top">
-            <div class="logo">
-                <i class='bx bxl-facebook-circle' ></i>
-                <span> <- LOGO HERE</span>
-            </div>
+            <div class="logo"></div>
             <i class="bx bx-menu" id="btn"></i>
         </div>
         <div class="user">
@@ -29,114 +29,114 @@
         </div>
         <ul>
             <li>
-                <a href="#">
-                    <i class='bx bxs-home' ></i>
+                <a href="main.html">
+                    <i class='bx bxs-home'></i>
                     <span class="nav-item">Home</span>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bxs-book' ></i>
+                <a href="reservation.html">
+                    <i class='bx bxs-book'></i>
                     <span class="nav-item">Reservations</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bxs-calendar' ></i>
+                    <i class='bx bxs-calendar'></i>
                     <span class="nav-item">Calendar/Schedule</span>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bxs-log-out' ></i>
+                <a href="index.html">
+                    <i class='bx bxs-log-out'></i>
                     <span class="nav-item">Log Out</span>
                 </a>
             </li>
         </ul>
     </div>
-    
- <!--------------------------------------------------------------->
- <!---------------------- MAIN PAGE CONTENT ---------------------->
- <!--------------------------------------------------------------->
 
-<div class="main-content">
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 1">
-        <div class="details">
-            <p>Description for Car 1</p>
-            <button class="reserve-button">Reserve Now</button>
+    <!--------------------------------------------------------------->
+    <!---------------------- MAIN PAGE CONTENT ---------------------->
+    <!--------------------------------------------------------------->
+
+    <div class="main-content">
+        <div class="container">
+            <img src="images/car.jpg" alt="Car 1">
+            <div class="details">
+                <p>Description for Car 1</p>
+                <button class="reserve-button">Reserve Now</button>
+            </div>
         </div>
+
+        <div class="container">
+            <img src="images/car.jpg" alt="Car 2">
+            <div class="details">
+                <p>Description for Car 2</p>
+                <button class="reserve-button">Reserve Now</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="images/car.jpg" alt="Car 3">
+            <div class="details">
+                <p>Description for Car 3</p>
+                <button class="reserve-button">Reserve Now</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="images/car.jpg" alt="Car 4">
+            <div class="details">
+                <p>Description for Car 4</p>
+                <button class="reserve-button">Reserve Now</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="images/car.jpg" alt="Car 5">
+            <div class="details">
+                <p>Description for Car 5</p>
+                <button class="reserve-button">Reserve Now</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="images/car.jpg" alt="Car 6">
+            <div class="details">
+                <p>Description for Car 6</p>
+                <button class="reserve-button">Reserve Now</button>
+            </div>
+        </div>
+
     </div>
 
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 2">
-        <div class="details">
-            <p>Description for Car 2</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
+    <div class="navigation">
+        <button id="prevBtn">&#9665; Back</button>
+        <button id="nextBtn">Next &#9655;</button>
     </div>
 
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 3">
-        <div class="details">
-            <p>Description for Car 3</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
+    <div class="overlay" id="overlay">
+        <img src="" alt="Full Size">
     </div>
 
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 4">
-        <div class="details">
-            <p>Description for Car 4</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
-    </div>
-
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 5">
-        <div class="details">
-            <p>Description for Car 5</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
-    </div>
-
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 6">
-        <div class="details">
-            <p>Description for Car 6</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
-    </div>
-    
-</div>
-
-<div class="navigation">
-    <button id="prevBtn">&#9665; Back</button>
-    <button id="nextBtn">Next &#9655;</button>
-</div>
-
-<div class="overlay" id="overlay">
-    <img src="" alt="Full Size">
-</div>
 
 
-    
 </body>
 
 <script>
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
-    
+
     btn.onclick = function () {
         sidebar.classList.toggle("active");
     };
-    
+
     const containers = document.querySelectorAll('.container');
     const overlay = document.getElementById('overlay');
     const overlayImage = overlay.querySelector('img');
-    
+
     let currentIndex = 0;
-    
+
     const showContainers = (start, end) => {
         containers.forEach((container, index) => {
             if (index >= start && index < end) {
@@ -146,12 +146,12 @@
             }
         });
     };
-    
+
     const updateNavigation = () => {
         document.getElementById('prevBtn').disabled = currentIndex === 0;
         document.getElementById('nextBtn').disabled = currentIndex >= containers.length - 4;
     };
-    
+
     document.getElementById('prevBtn').addEventListener('click', () => {
         if (currentIndex >= 4) {
             currentIndex -= 4;
@@ -159,7 +159,7 @@
             updateNavigation();
         }
     });
-    
+
     document.getElementById('nextBtn').addEventListener('click', () => {
         if (currentIndex + 4 < containers.length) {
             currentIndex += 4;
@@ -167,34 +167,35 @@
             updateNavigation();
         }
     });
-    
+
     containers.forEach(container => {
         container.addEventListener('click', () => {
             overlayImage.src = container.querySelector('img').src;
             overlay.style.display = 'flex';
         });
-    
+
         container.addEventListener('mouseenter', () => {
             container.style.transform = 'scale(1.05)';
             container.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
         });
-    
+
         container.addEventListener('mouseleave', () => {
             container.style.transform = 'scale(1)';
             container.style.boxShadow = 'none';
         });
-    
+
         container.querySelector('.reserve-button').addEventListener('click', (event) => {
             event.stopPropagation();
         });
     });
-    
+
     overlay.addEventListener('click', () => {
         overlay.style.display = 'none';
     });
-    
+
     showContainers(currentIndex, currentIndex + 4);
     updateNavigation();
 
 </script>
+
 </html>
