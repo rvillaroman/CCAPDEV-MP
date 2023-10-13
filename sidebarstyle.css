@@ -21,6 +21,10 @@
     width: calc(100% - 250px);
 }
 
+.sidebar.active ~ .navigation {
+    transform: translateX(80px);
+}
+
 .sidebar.active {
     width: 250px;
 }

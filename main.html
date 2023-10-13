@@ -141,9 +141,11 @@
 
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
+    let navigation = document.querySelector(".navigation");
 
     btn.onclick = function () {
         sidebar.classList.toggle("active");
+        navigation.classList.toggle("active");
     };
 
     const containers = document.querySelectorAll('.container');
