@@ -59,56 +59,7 @@
  <!---------------------- MAIN PAGE CONTENT ---------------------->
  <!--------------------------------------------------------------->
 
-<div class="main-content">
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 1">
-        <div class="details">
-            <p>Description for Car 1</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
-    </div>
-
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 2">
-        <div class="details">
-            <p>Description for Car 2</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
-    </div>
-
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 3">
-        <div class="details">
-            <p>Description for Car 3</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
-    </div>
-
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 4">
-        <div class="details">
-            <p>Description for Car 4</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
-    </div>
-
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 5">
-        <div class="details">
-            <p>Description for Car 5</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
-    </div>
-
-    <div class="container">
-        <img src="images/car.jpg" alt="Car 6">
-        <div class="details">
-            <p>Description for Car 6</p>
-            <button class="reserve-button">Reserve Now</button>
-        </div>
-    </div>
-    
-</div>
+<div class="main-content"></div>
 
 <div class="navigation">
     <button id="prevBtn">&#9665; Back</button>
@@ -119,11 +70,61 @@
     <img src="" alt="Full Size">
 </div>
 
-
-    
 </body>
 
 <script>
+    const descriptions = [
+      "Description for Car 1",
+      "Description for Car 2",
+      "Description for Car 3",
+      "Description for Car 4",
+      "Description for Car 5",
+      "Description for Car 6",
+      "Description for Car 8"
+    ];
+
+    const images = [
+      "images/car.jpg",
+      "images/car.jpg",
+      "images/car.jpg",
+      "images/car.jpg",
+      "images/car.jpg",
+      "images/car.jpg",
+      "images/car.jpg"
+    ];
+
+    function createCarContainer(description, imageSrc) {
+        const mainContent = document.querySelector('.main-content');
+        const container = document.createElement('div');
+        container.classList.add('container');
+      
+        const img = document.createElement('img');
+        img.src = imageSrc;
+        img.alt = description;
+      
+        const details = document.createElement('div');
+        details.classList.add('details');
+      
+        const p = document.createElement('p');
+        p.textContent = description;
+      
+        const button = document.createElement('button');
+        button.classList.add('reserve-button');
+        button.textContent = 'Reserve Now';
+      
+        details.appendChild(p);
+        details.appendChild(button);
+      
+        container.appendChild(img);
+        container.appendChild(details);
+      
+        mainContent.appendChild(container);
+      }
+      
+      for (let i = 0; i < descriptions.length; i++) {
+        createCarContainer(descriptions[i], images[i]);
+      }
+
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
     
