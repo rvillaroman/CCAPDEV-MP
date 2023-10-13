@@ -55,40 +55,40 @@
         </ul>
     </div>
 
-<div class="main-content"></div>
+    <div class="main-content"></div>
 
-<div class="navigation">
-    <button id="prevBtn">&#9665; Back</button>
-    <button id="nextBtn">Next &#9655;</button>
-</div>
+    <div class="navigation">
+        <button id="prevBtn">&#9665; Back</button>
+        <button id="nextBtn">Next &#9655;</button>
+    </div>
 
-<div class="overlay" id="overlay">
-    <img src="" alt="Full Size">
-</div>
+    <div class="overlay" id="overlay">
+        <img src="" alt="Full Size">
+    </div>
 
 </body>
 
 <script>
     const descriptions = [
-      "Ford Everest",
-      "Ford Mustang",
-      "Ford Territory",
-      "Ford Ranger",
-      "BMW i7",
-      "BMW 3 Series Sedan",
-      "BMW 5 Series Sedan",
-      "6 Series Gran Turismo"
+        "Ford Everest",
+        "Ford Mustang",
+        "Ford Territory",
+        "Ford Ranger",
+        "BMW i7",
+        "BMW 3 Series Sedan",
+        "BMW 5 Series Sedan",
+        "6 Series Gran Turismo"
     ];
 
     const images = [
-      "images/car.jpg",
-      "images/car2.jpg",
-      "images/car3.jpg",
-      "images/car4.jpg",
-      "images/car5.jpg",
-      "images/car6.jpg",
-      "images/car7.jpg",
-      "images/car8.jpg"
+        "images/car.jpg",
+        "images/car2.jpg",
+        "images/car3.jpg",
+        "images/car4.jpg",
+        "images/car5.jpg",
+        "images/car6.jpg",
+        "images/car7.jpg",
+        "images/car8.jpg"
     ];
 
     const availability = [
@@ -106,38 +106,38 @@
         const mainContent = document.querySelector('.main-content');
         const container = document.createElement('div');
         container.classList.add('container');
-      
+
         const img = document.createElement('img');
         img.src = imageSrc;
         img.alt = description;
-      
+
         const details = document.createElement('div');
         details.classList.add('details');
-      
+
         const p = document.createElement('p');
         p.textContent = description;
-      
+
         const p2 = document.createElement('p');
         p2.textContent = isAvailable ? "Available" : "Unavailable";
-      
+
         const button = document.createElement('button');
         button.classList.add('rent-button');
-        button.textContent = 'Rent Now!';
+        button.textContent = 'Reserve';
         button.disabled = !isAvailable;
-      
+
         details.appendChild(p);
         details.appendChild(p2);
         details.appendChild(button);
-      
+
         container.appendChild(img);
         container.appendChild(details);
-      
+
         mainContent.appendChild(container);
     }
-      
-      for (let i = 0; i < descriptions.length; i++) {
+
+    for (let i = 0; i < descriptions.length; i++) {
         createCarContainer(descriptions[i], images[i], availability[i]);
-      }
+    }
 
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
