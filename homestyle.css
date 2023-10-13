@@ -217,3 +217,12 @@
     background-color: #d1d1d1;
     cursor: not-allowed;
 }
+
+.disabled-container {
+    filter: grayscale(100%);
+}
+
+.disabled-container:hover {
+    transform: scale(1) !important;
+    box-shadow: none !important;
+}

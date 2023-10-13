@@ -196,5 +196,21 @@
     showContainers(currentIndex, currentIndex + 4);
     updateNavigation();
 
+    function disableEffects(index) {
+        const container = containers[index];
+        container.removeEventListener('mouseenter', () => {
+            container.style.transform = 'scale(1.05)';
+            container.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+        });
+        container.removeEventListener('mouseleave', () => {
+            container.style.transform = 'scale(1)';
+            container.style.boxShadow = 'none';
+        });
+        container.querySelector('.reserve-button').disabled = true;
+        container.classList.add('disabled-container');
+    }
+
+    disableEffects(1);
+
 </script>
 </html>
