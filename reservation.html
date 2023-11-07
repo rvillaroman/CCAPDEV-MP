@@ -60,12 +60,31 @@
 
                 <!--Form Request-->
                 <form>
+
+                    <!--First Name and Last Name-->
+                    <div class="form-row">
+                        <h3 class="GivenName">First Name Last Name</h3>
+                    </div>
+
+                    <!--Position -->
+                    <div class="form-row">
+                        <h5 class="Position">Administrator</h5>
+                    </div>
+
                     <!--From and To Dates-->
                     <div class="form-row">
                         <label for="From">From: </label>
                         <input type="date" id="FromDate" name="FromDate">
                         <label for="To"> To:</label>
                         <input type="date" id="ToDate" name="ToDate">
+                    </div>
+
+                    <!--Time-->
+                    <div class ="form-row">
+                        <label for="From">From: </label>
+                        <input type="time" id="FromTime" required>
+                        <label for="To"> To:</label>
+                        <input type="time" id="ToTime" required>
                     </div>
 
                     <!--Car Selection-->
@@ -79,29 +98,9 @@
                         </select>
                     </div>
 
-                    <!--First Name and Last Name-->
-                    <div class="form-row">
-                        <input type="text" placeholder="First Name" required>
-                        <input type="text" placeholder="Last Name" required>
-                    </div>
-
-                    <!--ID and Phone Numbers-->
-                    <div class="form-row">
-                        <input type="text" placeholder="ID Number" required>
-                        <input type="text" placeholder="Phone Number" required>
-                    </div>
-
                     <!--Text Box-->
                     <div class="form-row">
-                        <textarea id="reason" rows="5" cols="33">Type your reason here (Optional).</textarea>
-                    </div>
-
-                    <!--Bypass Request approval-->
-                    <div class="form-row">
-                        <select name="Bypass">
-                            <option value="Employee">Employee</option>
-                            <option value="Employee" disabled>Administrator</option>
-                        </select>
+                        <textarea id="TextReason" rows="5" cols="33" placeholder="Type your reason. (Optional)"></textarea>
                     </div>
 
                     <!--Submit Button-->
