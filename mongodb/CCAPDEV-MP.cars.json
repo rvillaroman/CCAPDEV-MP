@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "654ca3a152ca34b0974b7d72"
+  },
+  "reserveEnd": {
+    "$date": "1999-12-31T16:00:00.000Z"
+  },
+  "reserveStart": {
+    "$date": "1999-12-31T16:00:00.000Z"
+  },
+  "vehicleID": 1,
+  "vehicleName": "CarName",
+  "reserved": false
+}]
