@@ -1,0 +1,47 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\XG755N\node_modules\yarn\bin\yarn.js start
+
+PATH: 
+  C:\Users\XG755N\Documents\GitHub\CCAPDEV-MP\node_modules\.bin;C:\Users\XG755N\Documents\GitHub\node_modules\.bin;C:\Users\XG755N\Documents\node_modules\.bin;C:\Users\XG755N\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Users\XG755N\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.7.7-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\dotnet\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\XG755N\AppData\Local\Microsoft\WindowsApps;C:\Users\XG755N\AppData\Local\GitHubDesktop\bin;C:\Users\XG755N\AppData\Local\Programs\Python\Python39;;C:\Users\XG755N\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\XG755N\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.18.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\XG755N\Documents\GitHub\CCAPDEV-MP\server\package.json: Unexpected string in JSON at position 158
+      at JSON.parse (<anonymous>)
+      at C:\Users\XG755N\node_modules\yarn\lib\cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\XG755N\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\XG755N\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "server",
+      "version": "1.0.0",
+      "main": "index.js",
+      "license": "MIT",
+      "scripts": {
+          "start": "nodemon server.js"
+      }
+      "dependencies": {
+          "body-parser": "^1.19.0",
+          "dotenv": "^8.2.0",
+          "express": "^4.17.1",
+          "moment": "2.29.0",
+          "mongoose": "^5.10.7",
+          "nodemon": "^2.0.4"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
